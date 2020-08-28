@@ -1,0 +1,26 @@
+
+CONFIGURAR CONTA
+    git config --global user.name "Victor Rosa"
+    git config --global user.email "victor.lmr@hotmail.com"
+
+INICIALIZAR REPOSITORIO LOCAL
+    git init
+
+ADICIONAR ITENS
+    git add .\README.md (Unico Arquivo)
+    git add --all (Todos Arquivos)
+
+COMMITANDO 
+    git commit -m "Adicionando arquivos do projeto"
+
+LIGANDO REPOSITORIOS
+    git remote add origin https://github.com/vlrosa-dev/projeto-poo
+
+ENVIANDO OS ARQUIVOS PARA O SERVIDOR
+    git push -u origin master
+
+ATUALIZANDO OS ARQUIVOS LOCAIS
+    git pull
+
+CLONANDO UM REPOSITORIO DO SERVIDOR
+    git clone https://github.com/projeto-xx.git
