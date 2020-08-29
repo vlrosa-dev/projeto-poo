@@ -24,3 +24,6 @@ ATUALIZANDO OS ARQUIVOS LOCAIS
 
 CLONANDO UM REPOSITORIO DO SERVIDOR
     git clone https://github.com/projeto-xx.git
+
+ADICIONAR UM ARQUIVO | DIRETORIO EM .GITIGNORE
+    echo Arq/Dir >> .gitignore
