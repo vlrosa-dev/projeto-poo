@@ -1,24 +1,23 @@
 using System;
-using System.Collections.Generic;
 
 namespace projeto_poo.entidades
 {
     public class ItemPedido
     {
-        public int CodItemPedido { get; set; }
+        public ItemPedido(){
+
+        }
+
+        public string CodItemPedido { get; } = Guid.NewGuid().ToString().Replace("-", "").Substring(0,8);
 
         public int Quantidade { get; set; }
 
-        public double Preco { get; set; }
+        public decimal Preco { get; set; }
 
-        public IList<Produto> Produto { get; } = new List<Produto>();
+        public Produto produto { get; set; }
 
-        public void IncluirItem(Produto p){
-            Produto.Add(p);
-        }
-
-        public void ExcluirItem(Produto p){
-            Produto.Remove(p);
+        public decimal GetTotal(){
+            return Quantidade * Preco;
         }
 
     }
