@@ -3,10 +3,8 @@ using System.Linq;
 using System.Collections.Generic;
 using projeto_poo.entidades.home;
 
-
     public class Produto
     {
-
         public Produto(){
 
         }
@@ -50,22 +48,21 @@ using projeto_poo.entidades.home;
         public void BuscarProdutos(){
             foreach (Produto produto in listProducts)
             {
-                Console.WriteLine($"Cod. do Produto: {produto.CodProduto} " + "| Nome do Produto: {produto.NomeProduto}");
+                Console.WriteLine($"Cod. do Produto: {produto.CodProduto} | Nome do Produto: {produto.NomeProduto}");
             }
         }
 
         public Produto ObterProduto(){
             WriteConsole write = new WriteConsole();
-
+        
             Produto ObterProduto = listProducts.FirstOrDefault(delegate(Produto produto){
                 return produto.CodProduto == write.ConsoleBuscarID();
             });
 
             Console.WriteLine($"Produto localizado com ID = {ObterProduto.CodProduto}");
             Console.WriteLine($"Nome do Produto Obtido = {ObterProduto.NomeProduto}");
-
-            return ObterProduto;
             
+            return ObterProduto;
         }
 
         public void RemoverProduto(){

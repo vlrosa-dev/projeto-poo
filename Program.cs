@@ -28,11 +28,10 @@ namespace projeto_poo.entidades
                         break;
                 }
 
-                operacao = read.MenuHome();
-
-            }
+                operacao = read.MenuHome(); 
             
-        }
+            }
   
+        }
     }
 }

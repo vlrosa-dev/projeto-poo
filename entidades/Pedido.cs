@@ -11,7 +11,7 @@ namespace projeto_poo.entidades
 
         public DateTime DataPedido { get ; set; } = DateTime.Now;
 
-        public IList<ItemPedido> ListItensPedidos { get; set; }
+        public List<ItemPedido> ListItensPedidos { get; set; } = new List<ItemPedido>();
 
         public decimal PrecoTotal
         {
@@ -31,8 +31,17 @@ namespace projeto_poo.entidades
         public void AdicionarItemPedido(ItemPedido item){
 
             WriteConsole write = new WriteConsole();
+            
             ListItensPedidos.Add(write.WriteOrder(item));
+            Console.WriteLine($"Item {item.CodItemPedido} adicionado ao pedido!");
 
+        }
+
+        public void VisualizarItensPedidos(){
+            foreach (ItemPedido item in ListItensPedidos)
+            {
+                Console.WriteLine($"Cod. Item Pedido: {item.CodItemPedido}");
+            }
         }
 
        

@@ -55,6 +55,7 @@ namespace projeto_poo.entidades
             {
                 Console.WriteLine("Console de Pedido: ");
                 Console.Write("| 1 - Novo Pedido");
+                Console.Write("| 2 - Visualizar");
                 Console.WriteLine("| 0 - Sair");
                 Console.Write("Resposta: ");
                 escolha = int.Parse(Console.ReadLine());

@@ -36,20 +36,11 @@ namespace projeto_poo.entidades.home
         }
 
         public ItemPedido WriteOrder(ItemPedido item){
-
-            Produto prod = new Produto();
-            prod.ObterProduto();
-
-            Console.WriteLine($"Nome do Produto: {item.produto.NomeProduto}");
-
+            
             Console.WriteLine("Informe a quantidade: ");
             item.Quantidade = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Preco do Produto: {item.produto.Preco}");
-            item.Preco = item.produto.Preco;
-
             return item;
-            
             
         } 
 

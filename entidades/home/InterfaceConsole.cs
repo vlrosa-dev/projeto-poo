@@ -47,6 +47,8 @@ namespace projeto_poo.entidades.home
         public void CreateOrder(){
 
             ReadConsole read = new ReadConsole();
+            Pedido pedido = new Pedido();
+            ItemPedido item = new ItemPedido();
 
             int chooseOption;
             chooseOption = read.MenuOrder();
@@ -56,12 +58,11 @@ namespace projeto_poo.entidades.home
             switch (chooseOption)
                 {
                     case 1:      
-                        Pedido pedido = new Pedido();
-                        pedido.AdicionarItemPedido(new ItemPedido());
+                        new Pedido().AdicionarItemPedido(new ItemPedido(item.produto.ObterProduto()));
                         break;
                     
                     case 2:
-                        
+                        pedido.VisualizarItensPedidos();
                         break;
 
                     case 3:
